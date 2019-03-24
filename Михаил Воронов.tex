@@ -1,0 +1,446 @@
+\documentclass[11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{qtree}
+\usepackage{avm}
+\usepackage{indentfirst}
+
+
+%Gummi|065|=)
+\title{\textbf{Домашнее задание по ЛФГ}}
+\author{Михаил Воронов}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\subsection{Предложение (a)}
+В этом предложении нет ничего страшного.
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} Зауыр
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[
+				.NP\\{\tiny($\uparrow$GF)=$\downarrow$}\\{\tiny($\uparrow$FOC)=$\downarrow$}
+				[
+					.N\\{\tiny$\uparrow$=$\downarrow$} [ Аланы ]
+				]
+			]
+			[
+				.V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$} [ фед-та ]
+				]
+			]
+		]
+	]
+]
+
+\begin{avm}
+\[
+	PRED = & \rm ‘увидеть\q<SUBJ, OBJ\q>’\\
+	TAM = & $past$\\
+	SUBJ = & \[
+		PRED  = & `Заур' \\
+		CASE = & $nom$
+	\]\\
+	OBJ = & \[
+		PRED = & `Алан' \\
+		CASE = & $gen$
+	\]
+\]
+\end{avm}
+
+\subsection{Предложение (b)}
+Структуры для этого предложения уже покажутся чуть более контринтуитивными. Однако, они соответствуют правилам. Интересно отметить, что f-структура совпадает с первым предложением. Я в точности не помню, как в ЛФГ обходят эту проблему, кажется, просто обводят кружочком то, что в фокусе, пишут отдельно слово FOC и соединяют их. В первом предложении тогда обведён будет SUBJ, во втором объведён будет OBJ.
+
+Однако, я всё равно не умею так рисовать в техе, поэтому здесь и далее (и до) этого не будет.
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} Аланы
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[
+				.NP\\{\tiny($\uparrow$GF)=$\downarrow$}\\{\tiny($\uparrow$FOC)=$\downarrow$}
+				[
+					.N\\{\tiny$\uparrow$=$\downarrow$}
+						[ Зауыр ]
+				]
+			]
+			[
+				.V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$}
+						[ фед-та ]
+				]
+			]
+		]
+	]
+]
+
+
+\begin{avm}
+\[
+	PRED = & \rm ‘увидеть\q<SUBJ, OBJ\q>’\\
+	TAM = & $past$\\
+	SUBJ = & \[
+		PRED  = & `Заур' \\
+		CASE  = & $nom$
+	\]\\
+	OBJ = & \[
+		PRED = & `Алан' \\
+		CASE = & $gen$
+	\]
+\]
+\end{avm}
+
+\subsection{Предложение (c)}
+Тоже довольно очевидное предложение без подводных камней.
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} Зауыр
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[
+				.V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$} [ эрбацыди ]
+				]
+			]
+		]
+	]
+]
+
+\begin{avm}
+\[
+	PRED = & \rm ‘придти\q<SUBJ\q>’\\
+	TAM = & $past$\\
+	SUBJ = & \[
+		PRED = & `Заур' \\
+		CASE = & $nom$
+	\]\\
+\]
+\end{avm}
+
+
+\subsection{Предложение (d)}
+Это предложение невозможно из-за противоречия TAM в группе комплементайзера: комплементайзер требует субъюнктив, а глагол стоит в форме прошедшего времени. Это предложение можно исправить, изменив форму глагола на субъюнктив.
+
+\begin{avm}
+\[
+	PRED = & \rm ‘хотеть\q<SUBJ, COMP\q>’\\
+	TAM = & $prs$\\
+	SUBJ = & \[
+		PRED = & `Заур' \\
+		CASE = & $gen$
+	\]\\
+	COMP = & \[
+		CTYPE = & $purp$\\
+		PRED = & \rm ‘придти\q<SUBJ\q>’\\
+		TAM = & $past$ & $\leftarrow$ошибка здесь, должен быть $sbjv$\\
+		SUBJ = & \[
+			PRED = & 'Алан'\\
+			CASE = & $nom$
+		\]
+	\]
+\]
+\end{avm}
+
+
+\subsection{Предложение (e)}
+Это предложение возможно.
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} Аланы
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[ .V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$} [ фэдны ]
+				]
+				[
+					.CP\\{\tiny($\uparrow$COMP)=$\downarrow$}
+					[
+						.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+						[
+							.NP\\{\tiny($\uparrow$POSS)=$\downarrow$}\\{\tiny($\downarrow$CASE)=(c)gen}
+							[
+								.N\\{\tiny$\uparrow$=$\downarrow$} Зауыры
+							]
+						]
+						[
+							.N\\{\tiny$\uparrow$=$\downarrow$} эфсымэр
+						]
+					]
+					[
+						.C'
+						[
+							.C\\{\tiny$\uparrow$=$\downarrow$} цэмэй
+						]
+						[
+							.S
+							[
+								.VP
+								[
+									.V'
+									[
+										.V\\{\tiny$\uparrow$=$\downarrow$} эрбацэуа
+									]
+								]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+] 
+
+\begin{avm}
+\[
+	PRED = & \rm ‘хотеть\q<SUBJ, COMP\q>’\\
+	TAM = & $prs$\\
+		SUBJ = & \[
+		PRED = & `Алан' \\
+		CASE = & $gen$
+	\]\\
+	COMP = & \[
+		CTYPE = & $purp$\\
+		PRED = & \rm ‘придти\q<SUBJ\q>’\\
+		TAM = & $sbjv$\\
+		SUBJ = & \[
+			PRED = & 'брат'\\
+			CASE = & $nom$\\
+			POSS = & \[
+				PRED = & 'Заур'\\
+				CASE = & $gen$
+			\]
+		\]
+	\]
+\]
+\end{avm}
+
+\subsection{Предложение (f)}
+Невозможно из-за конфликта с правилом (2). Мы не можем запихнать ничего похожего на VP перед комплементайзером. Исправленный вариант ниже.
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.NP\\{\tiny($\uparrow$POSS)=$\downarrow$}\\{\tiny($\downarrow$CASE)=(c)gen}
+			[ .N Зауыры ]
+		]
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} эфсымэры
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[
+				.V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$} [ фэдны ]
+				]
+				[
+					.CP\\{\tiny($\uparrow$COMP)=$\downarrow$}
+					[
+						.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+							[
+								.N\\{\tiny$\uparrow$=$\downarrow$} Алан
+							]
+					]
+					[
+						.C'
+						[
+							.C\\{\tiny$\uparrow$=$\downarrow$} цэмэй
+						]
+						[
+							.S
+							[
+								.VP
+								[
+									.V'
+									[
+										.V\\{\tiny$\uparrow$=$\downarrow$} эрбацэуа
+									]
+								]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+] 
+
+\begin{avm}
+\[
+	PRED = & \rm ‘хотеть\q<SUBJ, COMP\q>’\\
+	TAM = & $prs$\\
+	SUBJ = & \[
+		PRED = & `брат' \\
+		CASE = & $gen$\\
+		POSS = & \[
+			PRED = & 'Заур'\\
+			CASE = & $gen$
+		\]
+	\]\\
+	COMP = & \[
+		CTYPE = & $purp$\\
+		PRED = & \rm ‘придти\q<SUBJ\q>’\\
+		TAM = & $sbjv$ \\
+		SUBJ = & \[
+			PRED = & 'Алан'\\
+			CASE = & $nom$
+		\]
+	\]
+\]
+\end{avm}
+
+\subsection{Предложение (g)}
+Невозможно по правилу (1), так как "чи" требует фокус, а S его не принимает.
+Исправленный вариант: Аланы чи федта?
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} Аланы
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[
+				.NP\\{\tiny($\uparrow$GF)=$\downarrow$}\\{\tiny($\uparrow$FOC)=$\downarrow$}
+				[
+					.N\\{\tiny$\uparrow$=$\downarrow$} [ чи ]
+				]
+			]
+			[
+				.V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$} [ фед-та ]
+				]
+			]
+		]
+	]
+]
+
+\begin{avm}
+\[
+	PRED = & \rm ‘увидеть\q<SUBJ, OBJ\q>’\\
+	TAM = & $past$\\
+	SUBJ = & \[
+		PRED  = & `кто' \\
+		CASE = & $nom$ \\
+		FOC = & true
+	\]\\
+	OBJ = & \[
+		PRED = & `Алан' \\
+		CASE = & $gen$
+	\]
+\]
+\end{avm}
+
+\subsection{Предложение (h)}
+Никаких проблем.
+
+\Tree
+[
+	.S
+	[
+		.NP\\{\tiny($\uparrow$GF)=$\downarrow$}
+		[
+			.N\\{\tiny$\uparrow$=$\downarrow$} Алан
+		]
+	]
+	[
+		.VP\\{\tiny$\uparrow$=$\downarrow$}
+		[
+			[
+				.NP\\{\tiny($\uparrow$GF)=$\downarrow$}\\{\tiny($\uparrow$FOC)=$\downarrow$}
+				[
+					.N\\{\tiny$\uparrow$=$\downarrow$} [ кэй ]
+				]
+			]
+			[
+				.V'
+				[
+					.V\\{\tiny$\uparrow$=$\downarrow$} [ фед-та ]
+				]
+			]
+		]
+	]
+]
+
+\begin{avm}
+\[
+	PRED = & \rm ‘увидеть\q<SUBJ, OBJ\q>’\\
+	TAM = & $past$\\
+	SUBJ = & \[
+		PRED  = & `Алан' \\
+		CASE = & $nom$
+	\]\\
+	OBJ = & \[
+		PRED = & `кто' \\
+		CASE = & $gen$ \\
+		FOC = & true
+	\]
+\]
+\end{avm}
+
+
+\section{}
+Самое очевидное, что тут можно почерпнуть, это то, что порядок SOV (правила 3 и 4). Однако, как и во многих языках с порядком слов SOV, здесь встречается порядок SVO в случае, когда в качестве прямого дополнения выступает клауза с комплементайзером (правила 3, 4 и 5).
+
+Это, вероятно, связано с тяжестью прямого дополнение (именную группу можно разместить между, а целую клаузу уже неудобно).
+
+Так же возможно вынесение субъекта во вторую позицию, если он в фокусе.
+
+В итоге у нас получается базовый порядок слов SOV (SVO, если объект комплементайзер, и OSV, если субъект в фокусе). Для клаузы с комплементайзером базовым порядком слов будут CSOV и SCOV.
+
+Так же стоит отметить, что язык левоветвящий: посессоры в генитиве (правило 6) расположены слева.
+
+\end{document}
